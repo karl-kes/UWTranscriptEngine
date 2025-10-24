@@ -1,4 +1,4 @@
-#include "Graded_Item\Graded_Item.h"
+#include "Graded_Item.h"
 
 class Graded_Category {
 private:
