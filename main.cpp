@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "ECE_Course.h"
+#include "ECE_Course\ECE_Course.h"
 
 int main();
 
