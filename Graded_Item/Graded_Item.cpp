@@ -20,11 +20,19 @@ double Graded_Item::get_grade() const {
 
 // Setters:
 std::string Graded_Item::set_name(std::string new_name) {
-
+    name = new_name;
 }
 double Graded_Item::set_weight(double new_weight) {
-
+    if (0 < new_weight && new_weight <= 1) {
+        weight = new_weight;
+    } else {
+        std::cout << "Invalid weight. Weight not updated." << std::endl;
+    }
 }
 double Graded_Item::set_grade(double new_grade) {
-    
+    if (0 <= new_grade && new_grade <= 100) {
+        grade = new_grade;
+    } else {
+        std::cout << "Invalid grade. Grade not updated." << std::endl;
+    }
 }

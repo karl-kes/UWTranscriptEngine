@@ -19,12 +19,16 @@ double Graded_Category::get_weight() const {
 }
 
 // Setters:
-std::string Graded_Category::set_name(std::string new_name) {
-
+void Graded_Category::set_name(std::string new_name) {
+    name = new_name;
 }
-std::vector<Graded_Item> Graded_Category::set_graded_items(std::vector<Graded_Item> new_graded_item) {
-
+void Graded_Category::set_graded_items(std::vector<Graded_Item> new_graded_item) {
+    graded_items = new_graded_item;
 }
-double Graded_Category::set_weight(double new_weight) { 
-
+void Graded_Category::set_weight(double new_weight) { 
+    if (0 < new_weight && new_weight <= 1) {
+        weight = new_weight;
+    } else {
+        std::cout << "Invalid weight. Weight not updated" << std::endl;
+    }
 }

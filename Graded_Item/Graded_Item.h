@@ -20,7 +20,7 @@ public:
     double get_grade() const;
 
     // Setters:
-    std::string set_name(std::string new_name);
-    double set_weight(double new_weight);
-    double set_grade(double new_grade);
+    void set_name(std::string new_name);
+    void set_weight(double new_weight);
+    void set_grade(double new_grade);
 };

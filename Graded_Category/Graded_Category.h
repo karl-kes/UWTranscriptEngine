@@ -18,7 +18,7 @@ public:
     double get_weight() const;
 
     // Setters:
-    std::string set_name(std::string new_name);
-    std::vector<Graded_Item> set_graded_items(std::vector<Graded_Item> new_graded_item);
-    double set_weight(double new_weight);
+    void set_name(std::string new_name);
+    void set_graded_items(std::vector<Graded_Item> new_graded_item);
+    void set_weight(double new_weight);
 };
