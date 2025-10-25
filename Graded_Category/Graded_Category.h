@@ -1,4 +1,5 @@
-#include "Graded_Item.h"
+#include "../Graded_Item/Graded_Item.h"
+#pragma once
 
 class Graded_Category {
 private:

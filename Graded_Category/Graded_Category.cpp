@@ -32,6 +32,6 @@ void Graded_Category::set_weight(double new_weight) {
     if (0 < new_weight && new_weight <= 1) {
         weight = new_weight;
     } else {
-        std::cout << "Invalid weight. Weight not updated" << std::endl;
+        std::cerr << "Invalid weight. Weight not updated" << std::endl;
     }
 }
