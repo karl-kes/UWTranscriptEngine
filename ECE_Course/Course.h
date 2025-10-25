@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-class ECE_Course {
+class Course {
 private:
     std::string name;
     double grade;
@@ -9,7 +9,9 @@ private:
 
 public:
     // Constructor:
-    ECE_Course(std::string course_name, double course_grade, double course_weight);
+    Course(std::string course_name, 
+               double course_grade, 
+               double course_weight);
 
     // Getters:
     std::string get_name() const;

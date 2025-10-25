@@ -1,6 +1,6 @@
 #include "Graded_Item.h"
 #include "Graded_Category.h"
-#include "ECE_Course.h"
+#include "Course.h"
 
 int main();
 
