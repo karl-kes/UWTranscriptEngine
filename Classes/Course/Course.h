@@ -3,21 +3,20 @@
 #include <string>
 #include "../Utilities/Constants.h"
 #include "../Helper_Functions/Helpers/Helpers.h"
+#include "../Classes/Graded_Category/Graded_Category.h"
 
 class Course {
 private:
-    static constexpr double FULL_CREDIT{0.5};
-    static constexpr double HALF_CREDIT{0.25};
-
-    std::string name;
     double grade;
     double credit;
+    std::string name;
+    std::vector<Graded_Category> graded_category;
 
 public:
     // Constructor:
-    Course(std::string course_name, 
-               double course_grade, 
-               double course_credit);
+    Course( std::string course_name, 
+            double course_grade, 
+            double course_credit );
 
     // Getters:
     std::string get_name() const;

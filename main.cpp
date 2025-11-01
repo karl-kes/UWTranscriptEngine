@@ -6,19 +6,38 @@
 int main();
 
 int main() {
-    
     std::vector<Course> courses{};
-    std::string user_prompt{};
+    char menu_prompt{};
 
-    std::cout << "New course [y/N]: ";
-    std::cin >> user_prompt; std::cout << std::endl;
+    do {
+        print_menu();
+        std::cin >> menu_prompt;
+        clear_buffer();
 
-    if (user_prompt == "y" || user_prompt == "Y") {
-        courses.push_back(user_created_course());
-        std::cout << courses[0].get_name() << std::endl;
-        std::cout << courses[0].get_grade() << std::endl;
-        std::cout << courses[0].get_credit() << std::endl;
-    }
+        switch ( menu_prompt ) {
+        // Case 4: Exit.
+        case '4':
+            return 0;
 
-    return 0;
+        // Case 1: Add course.
+        case '1':
+            courses.push_back( user_created_course() );
+            break;
+        
+        // Case 2: Edit course.
+        case '2':
+            // edit course.
+            break;
+
+        // Case 3: Delete course.
+        case '3':
+            // delete course.
+            break;
+
+        // Otherwise repeat.
+        default:
+            std::cout << "Invalid choice. Please enter 1-4." << std::endl;
+        }
+
+    } while ( true );
 }

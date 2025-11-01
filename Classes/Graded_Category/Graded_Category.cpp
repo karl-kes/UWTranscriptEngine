@@ -2,10 +2,10 @@
 
 // Constructor:
 Graded_Category::Graded_Category( std::string category_name,
-                                  std::vector<Graded_Item> category_items,
+                                  std::vector<Graded_Item> graded_item,
                                   double category_weight ) :
                                   name( category_name ),
-                                  graded_items( category_items ),
+                                  graded_item( graded_item ),
                                   weight( category_weight ) {
 
 }
@@ -14,8 +14,8 @@ Graded_Category::Graded_Category( std::string category_name,
 std::string Graded_Category::get_name() const {
     return name;
 }
-std::vector<Graded_Item> Graded_Category::get_graded_items() const {
-    return graded_items;
+std::vector<Graded_Item> Graded_Category::get_graded_item() const {
+    return graded_item;
 }
 double Graded_Category::get_weight() const {
     return weight;
@@ -25,8 +25,8 @@ double Graded_Category::get_weight() const {
 void Graded_Category::set_name( std::string new_name ) {
     name = new_name;
 }
-void Graded_Category::set_graded_items( std::vector<Graded_Item> new_graded_item ) {
-    graded_items = new_graded_item;
+void Graded_Category::set_graded_item( std::vector<Graded_Item> new_graded_item ) {
+    graded_item = new_graded_item;
 }
 void Graded_Category::set_weight( double new_weight ) { 
     if ( is_invalid_weight( new_weight ) ) {
