@@ -1,0 +1,41 @@
+#include "Course.h"
+
+// Constructor:
+Course::Course( std::string course_name, 
+                double course_grade, 
+                double course_credit ) :
+                name( course_name ), 
+                grade( course_grade ), 
+                credit (course_credit ) {
+    
+}
+
+// Getters:
+std::string Course::get_name() const {
+    return name;
+}
+double Course::get_grade() const {
+    return grade;
+}
+double Course::get_credit() const {
+    return credit;
+}
+
+// Setters:
+void Course::set_name( std::string new_name ) {
+    name = new_name;
+}
+void Course::set_grade( double new_grade ) {
+    if ( is_invalid_grade( new_grade ) ) {
+        std::cout << "Invalid grade (" << new_grade << "). Grade not updated." << std::endl;
+    } else {
+        grade = new_grade;
+    }
+}
+void Course::set_credit( double new_credit ) {
+    if ( is_invalid_credit( new_credit ) ) {
+        std::cout << "Invalid credit (" << new_credit << "). Grade not updated." << std::endl;
+    } else {
+        credit = new_credit;
+    }
+}

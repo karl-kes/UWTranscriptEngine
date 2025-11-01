@@ -1,7 +1,8 @@
+#pragma once
 #include <iostream>
 #include <string>
-#include <cmath>
-#pragma once
+#include "../Utilities/Constants.h"
+#include "../Helper_Functions/Helpers/Helpers.h"
 
 class Course {
 private:
@@ -27,5 +28,4 @@ public:
     void set_name(std::string new_name);
     void set_grade(double new_grade);
     void set_credit(double new_credit);
-    static Course user_created_course();
 };
