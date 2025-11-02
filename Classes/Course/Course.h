@@ -22,9 +22,11 @@ public:
     std::string get_name() const;
     double get_grade() const;
     double get_credit() const;
+    std::vector<Graded_Category> get_graded_category() const;
 
     // Setters:
-    void set_name(std::string new_name);
-    void set_grade(double new_grade);
-    void set_credit(double new_credit);
+    void set_name( std::string new_name );
+    void set_grade( double new_grade );
+    void set_credit( double new_credit);
+    void set_graded_category( std::vector<Graded_Category> new_graded_category );
 };

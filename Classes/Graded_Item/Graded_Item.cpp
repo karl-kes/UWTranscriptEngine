@@ -26,7 +26,7 @@ double Graded_Item::get_grade() const {
 void Graded_Item::set_name( std::string new_name ) {
     name = new_name;
 }
-void Graded_Item::set_weight(double new_weight) {
+void Graded_Item::set_weight( double new_weight ) {
     if ( is_invalid_weight( new_weight ) ) {
         std::cout << "Invalid weight (" << new_weight << "). Weight not updated." << std::endl;
     } else {

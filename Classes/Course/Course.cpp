@@ -23,6 +23,9 @@ double Course::get_grade() const {
 double Course::get_credit() const {
     return credit;
 }
+std::vector<Graded_Category> Course::get_graded_category() const {
+    return graded_category;
+}
 
 // Setters:
 void Course::set_name( std::string new_name ) {
@@ -41,4 +44,7 @@ void Course::set_credit( double new_credit ) {
     } else {
         credit = new_credit;
     }
+}
+void Course::set_graded_category( std::vector<Graded_Category> new_graded_category ) {
+    graded_category = new_graded_category;
 }

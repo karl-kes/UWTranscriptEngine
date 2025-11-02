@@ -90,7 +90,8 @@ std::size_t user_selected_course( std::size_t length ) {
 }
 
 Course user_created_course() {
-    std::string new_course_name{}, user_prompt{};
+    char user_prompt{};
+    std::string new_course_name{},
     double new_course_grade{ 0.0 }, new_course_credit{ 0.0 };
 
     std::cout << "Enter course name: ";
@@ -98,8 +99,8 @@ Course user_created_course() {
 
     std::cout << "Is course completed [y/N]: ";
     std::cin >> user_prompt;
-    bool course_completed{ ( user_prompt == "y" ) || 
-                           ( user_prompt == "Y" ) };
+    bool course_completed{ ( user_prompt == 'y' ) || 
+                           ( user_prompt == 'Y' ) };
 
     if ( course_completed ) {
         new_course_grade = get_valid_grade();
