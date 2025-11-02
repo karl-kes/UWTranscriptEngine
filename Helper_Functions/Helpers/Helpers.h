@@ -1,10 +1,11 @@
 #pragma once
 #include <limits>
 #include <iostream>
-#include "../Utilities/Constants.h"
+#include <vector>
+#include "../../Utilities/Constants.h"
+#include "../../Classes/Course/Course.h"
+#include "../../Utilities/Constants.h"
 
 void clear_buffer();
-void print_menu();
-bool is_invalid_grade( double input_grade );
-bool is_invalid_credit( double input_credit );
-bool is_invalid_weight( double input_weight );
+void display_menu();
+void display_courses( std::vector<Course> course );

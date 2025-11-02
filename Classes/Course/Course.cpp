@@ -3,10 +3,12 @@
 // Constructor:
 Course::Course( std::string course_name, 
                 double course_grade, 
-                double course_credit ) :
+                double course_credit,
+                std::vector<Graded_Category> course_graded_category) :
                 name( course_name ), 
                 grade( course_grade ), 
-                credit (course_credit ) {
+                credit(course_credit ),
+                graded_category( course_graded_category ) {
     
 }
 

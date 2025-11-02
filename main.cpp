@@ -10,13 +10,13 @@ int main() {
     char menu_prompt{};
 
     do {
-        print_menu();
+        display_menu();
         std::cin >> menu_prompt;
         clear_buffer();
 
         switch ( menu_prompt ) {
-        // Case 4: Exit.
-        case '4':
+        // Case 5: Exit.
+        case '5':
             return 0;
 
         // Case 1: Add course.
@@ -31,7 +31,15 @@ int main() {
 
         // Case 3: Delete course.
         case '3':
-            // delete course.
+            display_courses( courses );
+            std::cout << "You are deleting a course." << std::endl;
+            courses.erase( courses.begin() + user_selected_course( courses.size() ) );
+            std::cout << "Course deleted successfully." << std::endl;
+            break;
+        
+        // Case 4: Display courses.
+        case '4':
+            display_courses( courses );
             break;
 
         // Otherwise repeat.

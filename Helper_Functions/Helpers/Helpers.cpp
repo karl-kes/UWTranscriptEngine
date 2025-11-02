@@ -4,36 +4,23 @@ void clear_buffer() {
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
-void print_menu() {
+void display_menu() {
     std::cout << "<---Transcript Engine--->" << std::endl << std::endl;
 
     std::cout << "1. Add a course" << std::endl;
     std::cout << "2. Edit a course" << std::endl;
     std::cout << "3. Delete a course" << std::endl;
-    std::cout << "4. Exit" << std::endl << std::endl;
+    std::cout << "4. Display courses" << std::endl;
+    std::cout << "5. Exit program" << std::endl;
+    std::cout << "<----------------------->" << std::endl << std::endl;
 
-    std::cout << "Enter option [1-4]: ";
+    std::cout << "Enter option [1-5]: ";
 }
 
-bool is_invalid_grade( double input_grade ) {
-    if ( ( MIN_GRADE > input_grade ) || (MAX_GRADE < input_grade ) ) {
-        return true;
+void display_courses( std::vector<Course> course ) {
+    std::cout << "<--- Courses --->" << std::endl << std::endl;
+    for ( std::size_t index{0}; index < course.size(); ++index ) {
+        std::cout << index + 1 << ". " << course[index].get_name() << std::endl;
     }
-    return false;
-}
-
-bool is_invalid_credit ( double input_credit ) {
-    if ( ( std::abs( input_credit - FULL_CREDIT ) > EPSILON ) &&
-         ( std::abs( input_credit - HALF_CREDIT ) > EPSILON ) ) {
-        return true;
-    }
-    return false;
-}
-
-bool is_invalid_weight ( double input_weight ) {
-    if ( ( MIN_GRADE > input_weight ) || 
-         (MAX_GRADE < input_weight ) ) {
-        return true;
-    }
-    return false;
+    std::cout << "<--------------->" << std::endl <<std::endl;
 }

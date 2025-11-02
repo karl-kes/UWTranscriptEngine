@@ -51,6 +51,44 @@ double get_valid_weight() {
     return input_weight;
 }
 
+bool is_invalid_grade( double input_grade ) {
+    if ( ( MIN_GRADE > input_grade ) || (MAX_GRADE < input_grade ) ) {
+        return true;
+    }
+    return false;
+}
+
+bool is_invalid_credit ( double input_credit ) {
+    if ( ( std::abs( input_credit - FULL_CREDIT ) > EPSILON ) &&
+         ( std::abs( input_credit - HALF_CREDIT ) > EPSILON ) ) {
+        return true;
+    }
+    return false;
+}
+
+bool is_invalid_weight ( double input_weight ) {
+    if ( ( MIN_WEIGHT > input_weight ) || 
+         (MAX_WEIGHT < input_weight ) ) {
+        return true;
+    }
+    return false;
+}
+
+std::size_t user_selected_course( std::size_t length ) {
+    std::size_t index{};
+    do {
+        std::cout << "Enter selected course [1-" << length << "]: ";
+        std::cin >> index;
+        index--;
+
+        if ( index >= length ) {
+            std::cout << "Invalid index. Index not updated." << std::endl;
+        }
+    } while ( index >= length );
+
+    return index;
+}
+
 Course user_created_course() {
     std::string new_course_name{}, user_prompt{};
     double new_course_grade{ 0.0 }, new_course_credit{ 0.0 };
@@ -72,5 +110,7 @@ Course user_created_course() {
 
     new_course_credit = get_valid_credit();
 
-    return Course{new_course_name, new_course_grade, new_course_credit};
+    std::vector<Graded_Category> new_graded_category{};
+
+    return Course{ new_course_name, new_course_grade, new_course_credit, new_graded_category };
 }

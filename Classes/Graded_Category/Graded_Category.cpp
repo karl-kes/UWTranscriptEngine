@@ -2,10 +2,10 @@
 
 // Constructor:
 Graded_Category::Graded_Category( std::string category_name,
-                                  std::vector<Graded_Item> graded_item,
+                                  std::vector<Graded_Item> category_graded_item,
                                   double category_weight ) :
                                   name( category_name ),
-                                  graded_item( graded_item ),
+                                  graded_item( category_graded_item ),
                                   weight( category_weight ) {
 
 }
