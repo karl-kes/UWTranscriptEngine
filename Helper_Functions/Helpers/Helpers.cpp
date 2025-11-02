@@ -17,10 +17,11 @@ void display_menu() {
     std::cout << "Enter option [1-5]: ";
 }
 
-void display_courses( std::vector<Course> course ) {
+void display_courses( const std::vector<Course>& course ) {
     std::cout << "<--- Courses --->" << std::endl << std::endl;
     for ( std::size_t index{0}; index < course.size(); ++index ) {
         std::cout << index + 1 << ". " << course[index].get_name() << std::endl;
     }
+    std::cout << std::endl;
     std::cout << "<--------------->" << std::endl <<std::endl;
 }

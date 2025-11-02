@@ -94,7 +94,6 @@ Course user_created_course() {
     double new_course_grade{ 0.0 }, new_course_credit{ 0.0 };
 
     std::cout << "Enter course name: ";
-    clear_buffer();
     std::getline( std::cin, new_course_name );
 
     std::cout << "Is course completed [y/N]: ";

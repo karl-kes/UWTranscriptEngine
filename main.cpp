@@ -2,6 +2,7 @@
 #include "Classes/Graded_Category/Graded_Category.h"
 #include "Classes/Course/Course.h"
 #include "Helper_Functions/Input_Handling/Input_Handling.h"
+#include "Helper_Functions/Helpers/Helpers.h"
 
 int main();
 
@@ -44,7 +45,7 @@ int main() {
 
         // Otherwise repeat.
         default:
-            std::cout << "Invalid choice. Please enter 1-4." << std::endl;
+            std::cout << "Invalid choice. Please enter 1-5." << std::endl;
         }
 
     } while ( true );

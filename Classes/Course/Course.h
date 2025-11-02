@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include "../../Utilities/Constants.h"
-#include "../../Helper_Functions/Helpers/Helpers.h"
 #include "../../Classes/Graded_Category/Graded_Category.h"
 
 class Course {

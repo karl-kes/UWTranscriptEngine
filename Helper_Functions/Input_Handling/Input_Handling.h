@@ -1,7 +1,6 @@
 #pragma once
 #include "../../Classes/Course/Course.h"
 #include "../../Utilities/Constants.h"
-#include "../../Helper_Functions/Helpers/Helpers.h"
 #include <vector>
 
 

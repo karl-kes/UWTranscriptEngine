@@ -1,4 +1,5 @@
 #include "Course.h"
+#include "../../Helper_Functions/Input_Handling/Input_Handling.h"
 
 // Constructor:
 Course::Course( std::string course_name, 

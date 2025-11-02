@@ -1,4 +1,5 @@
 #include "Graded_Category.h"
+#include "../../Helper_Functions/Input_Handling/Input_Handling.h"
 
 // Constructor:
 Graded_Category::Graded_Category( std::string category_name,
